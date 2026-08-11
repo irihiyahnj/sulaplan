@@ -1,0 +1,60 @@
+name: build-images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/**"
+      - "packages/**"
+      - "deployments/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - service: web
+            dockerfile: apps/web/Dockerfile.web
+            context: .
+          - service: space
+            dockerfile: apps/space/Dockerfile.space
+            context: .
+          - service: admin
+            dockerfile: apps/admin/Dockerfile.admin
+            context: .
+          - service: live
+            dockerfile: apps/live/Dockerfile.live
+            context: .
+          - service: api
+            dockerfile: apps/api/Dockerfile.api
+            context: apps/api
+          - service: proxy
+            dockerfile: apps/proxy/Dockerfile.ce
+            context: apps/proxy
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push ${{ matrix.service }}
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ matrix.context }}
+          file: ${{ matrix.dockerfile }}
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/sulaplan-${{ matrix.service }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
