@@ -613,7 +613,7 @@ export const PLANS_COMPARISON_LIST: TPlansComparisonDetails[] = [
     features: [
       {
         title: "Power K",
-        description: "Access a keyboard-first gateway to almost anything\nin Plane.",
+        description: "Access a keyboard-first gateway to almost anything\nin sulaplan.",
         cloud: {
           free: true,
           one: true,
@@ -979,7 +979,7 @@ export const PLANS_COMPARISON_LIST: TPlansComparisonDetails[] = [
       },
       {
         title: "Slack",
-        description: "Get Plane activity in Slack and use / commands in\nSlack to make changes in Plane.",
+        description: "Get sulaplan activity in Slack and use / commands in\nSlack to make changes in sulaplan.",
         cloud: {
           free: false,
           one: false,
