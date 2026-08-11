@@ -1,0 +1,21 @@
+# 密钥与本地文件
+plane.env
+*.env
+.env
+!.env.example
+
+# 构建产物
+node_modules/
+.next/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# 系统
+.DS_Store
+
+# sula vector witness
+fragments/
+!fragments/README.md
+tools/sula_vector/__pycache__/

@@ -1,0 +1,12 @@
+{
+  "name": "Sula witness",
+  "version": "1.0.0",
+  "description": "Append mechanical evidence of what changed at the end of every turn.",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "python3 tools/sula_vector/skills/witness.py --project-root ."
+  }
+}

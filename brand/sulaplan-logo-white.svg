@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<rect width="512" height="512" fill="#101828"/>
+<polygon points="-100.0,-66.0 78.6,-66.0 113.4,-150.0 -100.0,-150.0" fill="#ffffff"/>
+<line x1="-100.0" y1="-66.0" x2="-100.0" y2="-150.0" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+<polygon points="78.6,-66.0 110.0,-34.6 194.0,-69.4 113.4,-150.0" fill="#ffffff"/>
+<line x1="78.6" y1="-66.0" x2="113.4" y2="-150.0" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+<polygon points="110.0,-34.6 110.0,-24.0 194.0,18.0 194.0,-69.4" fill="#ffffff"/>
+<line x1="110.0" y1="-34.6" x2="194.0" y2="-69.4" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+<polygon points="110.0,-24.0 54.0,18.0 82.0,102.0 194.0,18.0" fill="#ffffff"/>
+<line x1="110.0" y1="-24.0" x2="194.0" y2="18.0" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+<polygon points="54.0,18.0 -93.0,18.0 -9.0,102.0 82.0,102.0" fill="#ffffff"/>
+<line x1="54.0" y1="18.0" x2="82.0" y2="102.0" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+<polygon points="-93.0,18.0 -93.0,133.4 -9.0,98.6 -9.0,102.0" fill="#ffffff"/>
+<line x1="-93.0" y1="18.0" x2="-9.0" y2="102.0" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+<polygon points="-93.0,133.4 -12.4,214.0 22.4,130.0 -9.0,98.6" fill="#ffffff"/>
+<line x1="-93.0" y1="133.4" x2="-9.0" y2="98.6" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+<polygon points="-12.4,214.0 152.0,214.0 152.0,130.0 22.4,130.0" fill="#ffffff"/>
+<line x1="-12.4" y1="214.0" x2="22.4" y2="130.0" stroke="rgba(16,24,40,0.18)" stroke-width="3"/>
+</svg>

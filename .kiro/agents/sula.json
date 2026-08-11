@@ -1,0 +1,21 @@
+{
+  "name": "sula",
+  "description": "Project agent with the Sula boot injected at spawn and mechanical capture at the end of every turn.",
+  "tools": [
+    "*"
+  ],
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "python3 tools/sula_vector/render.py . --for-agent",
+        "timeout_ms": 60000
+      }
+    ],
+    "stop": [
+      {
+        "command": "python3 tools/sula_vector/skills/witness.py --project-root .",
+        "timeout_ms": 60000
+      }
+    ]
+  }
+}
