@@ -20,23 +20,23 @@ jobs:
       matrix:
         include:
           - service: web
-            dockerfile: apps/web/Dockerfile.web
-            context: .
+            dockerfile: vendor/plane/apps/web/Dockerfile.web
+            context: vendor/plane
           - service: space
-            dockerfile: apps/space/Dockerfile.space
-            context: .
+            dockerfile: vendor/plane/apps/space/Dockerfile.space
+            context: vendor/plane
           - service: admin
-            dockerfile: apps/admin/Dockerfile.admin
-            context: .
+            dockerfile: vendor/plane/apps/admin/Dockerfile.admin
+            context: vendor/plane
           - service: live
-            dockerfile: apps/live/Dockerfile.live
-            context: .
+            dockerfile: vendor/plane/apps/live/Dockerfile.live
+            context: vendor/plane
           - service: api
-            dockerfile: apps/api/Dockerfile.api
-            context: apps/api
+            dockerfile: vendor/plane/apps/api/Dockerfile.api
+            context: vendor/plane/apps/api
           - service: proxy
-            dockerfile: apps/proxy/Dockerfile.ce
-            context: apps/proxy
+            dockerfile: vendor/plane/apps/proxy/Dockerfile.ce
+            context: vendor/plane/apps/proxy
     steps:
       - uses: actions/checkout@v4
 
